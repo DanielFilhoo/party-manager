@@ -1,0 +1,75 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+    {
+      "name": "Decoração",
+      "description": "Escolha a decoração para sua festa, e nós a montamos.",
+      "price": 1400,
+      "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+    }
+
+###
+GET https://localhost:3000/api/services
+
+###
+GET https://localhost:3000/api/services/:id
+
+###
+DELETE https://localhost:3000/api/services/:id
+
+###
+PUT  https://localhost:3000/api/services/:id
+Content-Type: application/json
+
+{
+    "name": "Teste atualização",
+    "description": "Alguma descrição",
+    "price": 2500,
+    "image": "https://images.unsplash.com/photo-1615790469537-7c9d8e95c047?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+}
+
+
+###
+POST https://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evente",
+    "author": "Daniel",
+    "description": "Festa de aniversário",
+    "budget": 9000,
+    "image": "https://images.unsplash.com/photo-1615790469537-7c9d8e95c047?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "services": [
+                {
+                    "name": "Algum serviço 1",
+                    "description": "Alguma descrição",
+                    "price": 1400,
+                    "image": "https://images.unsplash.com/photo-1615790469537-7c9d8e95c047?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+                },
+                {
+                    "name": "Algum serviço 2",
+                    "description": "Alguma descrição",
+                    "price": 1800,
+                    "image": "https://images.unsplash.com/photo-1615790469537-7c9d8e95c047?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+                },
+
+    ]
+
+
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/:id
+
+
+###
+DELETE  http://localhost:3000/api/parties/:id
+
+###
+PUT http://localhost:3000/api/parties/:id
